@@ -1,0 +1,455 @@
+html, body{
+    overflow-x: hidden;
+}
+body{
+    display: flex;
+    flex-wrap: wrap;
+}
+header{
+    width: 100%;
+    background-color: #4A235A;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    color: white;
+}
+.banner-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    /*Asi hago el banner flex y sin usar height para que no rompa el flex*/
+    aspect-ratio: 16/9;
+    background-image: url(img/banner.jpg);
+    /* Con esto juego para bajar el fondo de la imagen y que me coja el backgroundcolor */
+   /*  background-position: left 0px bottom -100px;
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+header h2{
+    width: 50%;
+    margin-left: 20px;
+}
+header nav{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+header nav ul li{
+    margin-right: 20px;
+    margin-top: 10px;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.banner-container form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.banner-container form label{
+    color: white;
+    font-size: 20px;
+    margin: 10px;
+    margin-left: 20px;
+}
+.banner-container form input{
+    padding: 17px;
+    width: 200px;
+    border: 1px solid violet;
+    background: transparent;
+    color: #fff;
+    margin: 10px;
+    margin-left: 20px;
+
+}
+
+/*Usando GRID*/
+.container-people{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    width: 100%;
+}
+.container-people .one-container img{
+    border: 1px solid transparent;
+    border-radius: 80%;
+    width: 10%;
+    height: 27%;
+    object-fit: cover;
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+.container-people .one-container{
+    grid-column: 1;
+    grid-row: 1;
+    text-align: center; /*asi centro la imagen*/
+}
+
+.container-people .one-container input{
+    border: 1px solid #4A235A;
+    padding: 7px;
+    border-radius: 17px;
+    background-color: transparent;
+}
+.container-people .one-container p{
+    text-align: center;
+}
+
+.container-people .second-container{
+    grid-column: 2;
+    grid-row: 1;
+    text-align: center;
+}
+
+.container-people .second-container img{
+    border: 1px solid transparent;
+    border-radius: 80%;
+    margin-top: 20px;
+    object-fit: cover;
+    width: 10%;
+    height: 27%;
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+
+.container-people .second-container input{
+    border: 1px solid #4A235A;
+    padding: 7px;
+    border-radius: 17px;
+    background: transparent;
+}
+
+.container-people .second-container p{
+    text-align: center;
+}
+
+
+/*rapido,accesible,repsonsive*/
+
+.container-information{
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+    justify-content: space-around;
+    margin-top: 100px;
+    background-color: grey;
+}
+.container-information > div {
+    flex: 1; /* Asegura que los contenedores tengan el mismo tamaño */
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    position: relative;
+}
+.container-information .rapido-container{
+    text-align: center;
+    border-right: 1px solid grey;
+    padding: 20px;
+    color: #fff;
+    border-right: 1px solid #fff;
+    height: auto 100px;
+}
+
+.container-information .rapido-container img{
+    width: 50px;
+}
+
+.container-information .accesible-container{
+    padding: 20px;
+    color: #fff;
+    border-right: 1px solid #fff;
+    cursor: pointer;
+}
+
+.container-information .accesible-container img{
+    width: 50px;
+}
+
+.container-information .responsive-container{
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+
+.container-information .responsive-container img{
+    width: 50px;
+}
+.container-information .accesible-container input{
+    margin-top: 10px;
+    padding: 7px;
+    background-color: transparent;
+    border: 1px solid #4A235A;
+    color: #4A235A;
+    border-radius: 20px; 
+}
+.container-information .responsive-container input{
+    display: block;
+    margin-top: 10px;
+    padding: 7px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: transparent;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/*FOOTER*/
+footer{
+    background-color: #4A235A;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+footer h3{
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
+footer form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+footer form .mensaje{
+    text-align: center;
+    display: flex;
+    padding: 10px;
+    
+}
+footer form .linea{
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+}
+footer form .linea div{
+    width: 50%;
+    margin: 10px;
+}
+footer form .linea div input{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+footer form label{
+    margin: 0 auto;
+    width: 91%;
+    margin-bottom: 20px;
+}
+footer form input[type="text"]{
+    margin: 0 auto;
+    gap: 7px;
+    width: 90%;
+    padding-bottom: 200px;
+    background-color: transparent;
+    color: #fff;
+    border:  1px solid aquamarine;
+    border-radius: 7px;
+    padding-top: 7px;
+    
+}
+footer form .campo label{
+   margin-bottom: 20px;
+   
+}
+footer form .campo input {
+    width: 83%;
+    padding-bottom: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background: transparent;
+    margin: 0 auto;
+}
+footer form input[type="submit"]{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    background: transparent;
+    color: #fff;
+    padding: 7px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    
+}
+
+/*Menu Hamburguesa*/
+.menu a{
+	color:white;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 0 10px;
+	transition: 0.4s;
+}
+
+.mostrar-menu, .ocultar-menu{
+	font-size: 30px;
+	cursor: pointer;
+	display: none;
+	transition: 0.4s;
+    /*asi lo coloco a la dereche del menu hamburguesa*/
+    right: 20px;
+    position: absolute;
+    margin-top: 10px;
+}
+
+.mostrar-menu{
+	order:1;
+}
+
+.menu a:hover, 
+.mostrar-menu:hover, 
+.ocultar-menu:hover{
+	color:violet;
+}
+
+#check{
+	display: none;
+}
+
+@media(max-width: 768px){
+	.mostrar-menu,
+	.ocultar-menu{
+		display: block;
+	}
+
+	.menu{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		right: -100%;
+		top: 0;
+		text-align: center;
+		background: #4A235A;
+		padding: 100px 0;
+		transition: 0.8s;
+        display: flex;
+        justify-content: center;
+        z-index: 1;
+        
+	}
+	.menu ul{
+		display: block;
+        width: 100%;
+		padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-left: 30px;
+	}
+    .menu ul li:nth-child(2){
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+	.ocultar-menu{
+		position: absolute;
+		top: 40px;
+		right: 40px;
+	}
+	#check:checked ~ .menu{
+		right: 0;
+	}
+}
+
+/* Media Query menor o igual 790px*/
+@media (max-width: 790px)  {
+    
+    .container-people{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        max-width: 100%;
+    }
+
+    .container-people .one-container{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .container-people .second-container{
+        margin-top: 40px;
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .container-information{
+        flex-direction:column ;
+        align-items: center;
+    }
+    .container-information > div {
+        text-align: center;
+        color: #fff;
+        padding: 20px;
+        position: relative;
+        justify-items: center;
+    }
+    .container-information > .responsive-container{
+        text-align: center;
+    }
+    .container-information .responsive-container input{
+        display: block;
+        margin-top: 10px;
+        padding: 7px;
+        background-color: transparent;
+        border: 1px solid #4A235A;
+        color: #4A235A;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    .container-information .accesible-container{
+        padding: 20px;
+        color: #fff;
+        border-right: 1px solid transparent;
+        margin-top: 40px;
+    }
+    .container-information .rapido-container{
+        text-align: center;
+        padding: 20px;
+        color: #fff;
+        border-right: 1px solid transparent;
+        height: auto 100px;
+    }
+    .container-information .accesible-container input{
+        border: 1px solid transparent;
+        color: transparent;
+    }
+    footer{
+        background-color: #4A235A;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 30px;
+    }
+    footer form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #fff;
+    }
+    footer form .linea{
+        display: flex;
+        flex-direction: column;
+        width: 180%;
+    }
+}
